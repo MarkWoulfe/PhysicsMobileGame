@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 0e0829d6bc047734f89025e7e94fd1a4
+guid: 00c2412649977c54a8e2c8930659e341
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: turret_2_bottom
-    100002: //RootNode
+    100000: //RootNode
+    100002: turret_2_bottom
     100004: turret_2_top
     100006: turret_2_top_left_gun
-    400000: turret_2_bottom
-    400002: //RootNode
+    400000: //RootNode
+    400002: turret_2_bottom
     400004: turret_2_top
     400006: turret_2_top_left_gun
     2300000: turret_2_bottom
