@@ -84,6 +84,7 @@ GameObject:
   - 4: {fileID: 21762393}
   - 33: {fileID: 21762392}
   - 23: {fileID: 21762391}
+  - 114: {fileID: 21762394}
   m_Layer: 0
   m_Name: Cannon_Guns
   m_TagString: Untagged
@@ -127,11 +128,23 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 599236d5c068a794d9343b8b7d51ca70, type: 2}
   m_PrefabInternal: {fileID: 1510449295}
   m_GameObject: {fileID: 21762390}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 39967307}
+--- !u!114 &21762394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 21762390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d39b19f6a30b0e4b8246f9fdb6ebe95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 1
 --- !u!1 &39967306
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +168,7 @@ Transform:
   m_PrefabInternal: {fileID: 1510449295}
   m_GameObject: {fileID: 39967306}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .0500000007, y: .0500000007, z: .0500000007}
   m_Children:
   - {fileID: 1020074072}
@@ -267,7 +280,7 @@ Halo:
   m_Color:
     serializedVersion: 2
     rgba: 4281743019
-  m_Size: -.159999996
+  m_Size: 1.64999998
 --- !u!23 &716017912
 Renderer:
   m_ObjectHideFlags: 0
@@ -454,7 +467,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400006, guid: 599236d5c068a794d9343b8b7d51ca70, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 599236d5c068a794d9343b8b7d51ca70, type: 2}
       propertyPath: m_LocalPosition.y
@@ -480,6 +493,30 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 599236d5c068a794d9343b8b7d51ca70, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 599236d5c068a794d9343b8b7d51ca70, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 599236d5c068a794d9343b8b7d51ca70, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 599236d5c068a794d9343b8b7d51ca70, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 599236d5c068a794d9343b8b7d51ca70, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 599236d5c068a794d9343b8b7d51ca70, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 599236d5c068a794d9343b8b7d51ca70, type: 2}
   m_RootGameObject: {fileID: 39967306}
@@ -495,6 +532,7 @@ GameObject:
   - 4: {fileID: 1529463962}
   - 33: {fileID: 1529463964}
   - 23: {fileID: 1529463963}
+  - 114: {fileID: 1529463965}
   m_Layer: 0
   m_Name: Cannon_Top
   m_TagString: Untagged
@@ -508,7 +546,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 599236d5c068a794d9343b8b7d51ca70, type: 2}
   m_PrefabInternal: {fileID: 1510449295}
   m_GameObject: {fileID: 1529463961}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -543,3 +581,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1510449295}
   m_GameObject: {fileID: 1529463961}
   m_Mesh: {fileID: 4300002, guid: 00c2412649977c54a8e2c8930659e341, type: 3}
+--- !u!114 &1529463965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529463961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d39b19f6a30b0e4b8246f9fdb6ebe95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 1
