@@ -87,6 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 700
   angle: {x: 1, y: 1, z: 0}
+  cannon: {fileID: 0}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

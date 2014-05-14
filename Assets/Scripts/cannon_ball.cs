@@ -19,6 +19,7 @@ public class cannon_ball : MonoBehaviour {
             angle = transform.position - cannon.transform.position;
 
             angle.Normalize();
+            print(angle);
 
 			rigidbody.AddForce(angle * power);
 			rigidbody.useGravity = true;

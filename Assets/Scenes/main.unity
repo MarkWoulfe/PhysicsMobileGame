@@ -337,7 +337,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 2000
-  angle: {x: 1, y: 1, z: 0}
+  angle: {x: 0, y: 0, z: 0}
+  cannon: {fileID: 331782927}
 --- !u!54 &409368896
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -346,7 +347,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 995711831}
   m_GameObject: {fileID: 409368894}
   serializedVersion: 2
-  m_Mass: 5
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 0
@@ -670,7 +671,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: 0b6343f186d08e14891f2c7a5b6870e1, type: 2}
       propertyPath: m_Mass
-      value: 5
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0b6343f186d08e14891f2c7a5b6870e1, type: 2}
+      propertyPath: cannon
+      value: 
+      objectReference: {fileID: 331782927}
+    - target: {fileID: 11400000, guid: 0b6343f186d08e14891f2c7a5b6870e1, type: 2}
+      propertyPath: angle.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0b6343f186d08e14891f2c7a5b6870e1, type: 2}
+      propertyPath: angle.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b6343f186d08e14891f2c7a5b6870e1, type: 2}
