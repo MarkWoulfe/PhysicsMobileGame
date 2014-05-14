@@ -57,8 +57,8 @@ public class Cannon_Pitch : MonoBehaviour
             cannonBall.transform.RotateAround(transform.position, Vector3.forward, -rotateSpeed * Time.deltaTime);
         }
 
-        if (scaleValue < 1)
-            scaleValue += 0.01f;
+        if (scaleValue < 20)
+            scaleValue += 0.2f;
 
         cannonBall.transform.localScale = new Vector3(scaleValue, scaleValue, scaleValue);
     }
