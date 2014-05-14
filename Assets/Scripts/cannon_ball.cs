@@ -13,7 +13,8 @@ public class cannon_ball : MonoBehaviour {
 	void Update() {
 
 		if (Input.GetKeyDown ("space")) {
-			rigidbody.AddForce(angle * power);			
+			rigidbody.AddForce(angle * power);
+			rigidbody.useGravity = true;
 		}
 
 	}
