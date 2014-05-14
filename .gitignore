@@ -12,10 +12,10 @@
 *.booproj
 *.svd
 *.unityproj
+ProjectSettings/Physics2DSettings.asset
 
 Library/
 Temp/
-ProjectSettings/Physics2DSettings.asset
 ## Obj/
 Build/
 ExportedObj/
@@ -31,5 +31,3 @@ ExportedObj/
 Icon?
 ehthumbs.db
 Thumbs.db
-
-ProjectSettings/Physics2DSettings.asset
