@@ -2,6 +2,7 @@
 ## Unity
 #############
 
+*.apk
 *.pidb
 *.sln
 *.suo
