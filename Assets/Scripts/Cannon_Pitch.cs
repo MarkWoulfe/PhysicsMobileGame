@@ -9,6 +9,8 @@ public class Cannon_Pitch : MonoBehaviour
 
     float scaleValue = 0.01f;
 
+    bool fired = false;
+
     // Use this for initialization
     void Start()
     {
@@ -31,6 +33,10 @@ public class Cannon_Pitch : MonoBehaviour
             transform.Rotate(Vector3.forward, -rotateSpeed * Time.deltaTime);
             pitchedTurret = true;
         }
+        if (Input.GetKeyDown("space") || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began))
+        {
+            fired = true;
+        }
 
         angle = transform.localEulerAngles;
 
@@ -48,17 +54,17 @@ public class Cannon_Pitch : MonoBehaviour
 
         transform.localEulerAngles = angle;
 
-        if (pitchedTurret && Input.GetKey("up"))
+        if (pitchedTurret && Input.GetKey("up") && fired == false)
         {
             cannonBall.transform.RotateAround(transform.position, Vector3.forward, rotateSpeed * Time.deltaTime);
         }
-        if (pitchedTurret && Input.GetKey("down"))
+        if (pitchedTurret && Input.GetKey("down") && fired == false)
         {
             cannonBall.transform.RotateAround(transform.position, Vector3.forward, -rotateSpeed * Time.deltaTime);
         }
 
-        if (scaleValue < 20)
-            scaleValue += 0.2f;
+        if (scaleValue < 20 && fired == true)
+            scaleValue += 1.0f;
 
         cannonBall.transform.localScale = new Vector3(scaleValue, scaleValue, scaleValue);
     }

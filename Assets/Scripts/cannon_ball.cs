@@ -7,6 +7,7 @@ public class cannon_ball : MonoBehaviour {
 	public Vector3 angle;
 
     public GameObject cannon;
+    bool fired = false;
 
 	void start(){
 
@@ -21,8 +22,16 @@ public class cannon_ball : MonoBehaviour {
             angle.Normalize();
             print(angle);
 
-			rigidbody.AddForce(angle * power);
-			rigidbody.useGravity = true;
+            
 		}
+
+        float scaleValue = transform.localScale.x;
+
+        if (scaleValue >= 20 && fired == false)
+        {
+            fired = true;
+            rigidbody.AddForce(angle * power);
+            rigidbody.useGravity = true;
+        }
 	}
 }
