@@ -64,7 +64,7 @@ public class Cannon_Pitch : MonoBehaviour
         }
 
         if (scaleValue < 20 && fired == true)
-            scaleValue += 1.0f;
+            scaleValue += 2.0f;
 
         cannonBall.transform.localScale = new Vector3(scaleValue, scaleValue, scaleValue);
     }
