@@ -23,12 +23,12 @@ public class Cannon_Pitch : MonoBehaviour
         Vector3 angle = transform.localEulerAngles;
         bool pitchedTurret = false;
 
-        if (Input.GetKey("up") && (angle.z <= 45.1f || angle.z >= 339.9f))
+        if (Input.GetKey("up") && (angle.z < 45.1f || angle.z > 359.9f))
         {
             transform.Rotate(Vector3.forward, rotateSpeed * Time.deltaTime);
             pitchedTurret = true;
         }
-        if (Input.GetKey("down") && (angle.z <= 45.1f || angle.z >= 339.9f))
+        if (Input.GetKey("down") && (angle.z < 45.1f || angle.z > 359.9f))
         {
             transform.Rotate(Vector3.forward, -rotateSpeed * Time.deltaTime);
             pitchedTurret = true;
@@ -46,9 +46,9 @@ public class Cannon_Pitch : MonoBehaviour
             pitchedTurret = false;
         }
 
-        if (angle.z > 310 && angle.z < 340)
+        if (angle.z > 310 && angle.z < 360)
         {
-            angle.z = 340;
+            angle.z = 0;
             pitchedTurret = false;
         }
 

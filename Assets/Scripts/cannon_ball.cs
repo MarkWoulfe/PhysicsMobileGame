@@ -20,9 +20,7 @@ public class cannon_ball : MonoBehaviour {
             angle = transform.position - cannon.transform.position;
 
             angle.Normalize();
-            print(angle);
-
-            
+            angle = new Vector3(0.9f, 0.6f, 0.0f);
 		}
 
         float scaleValue = transform.localScale.x;
