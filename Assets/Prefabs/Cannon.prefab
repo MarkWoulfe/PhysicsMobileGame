@@ -610,6 +610,7 @@ MonoBehaviour:
   cannonBall2: {fileID: 100016}
   cannonBall3: {fileID: 100020}
   cannonBall4: {fileID: 100010}
+  gameCamera: {fileID: 100000, guid: ce5feef605a70024f8f175b8893d89fa, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
