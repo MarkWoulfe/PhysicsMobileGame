@@ -3,21 +3,21 @@
 #############
 
 *.apk
-*.pidb
+# *.pidb
 *.sln
 *.suo
-*.userprefs
-*.user
+# *.userprefs
+# *.user
 *.csproj
-*.orig
-*.booproj
+# *.orig
+# *.booproj
 *.svd
-*.unityproj
+# *.unityproj
 ProjectSettings/Physics2DSettings.asset
 
 Library/
 Temp/
-## Obj/
+Obj/
 Build/
 ExportedObj/
 
@@ -32,4 +32,3 @@ ExportedObj/
 Icon?
 ehthumbs.db
 Thumbs.db
-*.apk
