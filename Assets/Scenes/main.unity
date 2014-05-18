@@ -494,6 +494,11 @@ Prefab:
       propertyPath: gameCamera
       value: 
       objectReference: {fileID: 906345196}
+    - target: {fileID: 11400000, guid: 599236d5c068a794d9343b8b7d51ca70, type: 2}
+      propertyPath: myGUISkin
+      value: 
+      objectReference: {fileID: 11400000, guid: a892250a5734d4ec2b0c65d67ad3a0db,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 599236d5c068a794d9343b8b7d51ca70, type: 2}
   m_RootGameObject: {fileID: 39967306}
@@ -710,6 +715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cannonAngle: 0
+  myGUISkin: {fileID: 11400000, guid: a892250a5734d4ec2b0c65d67ad3a0db, type: 2}
   cannonBall1: {fileID: 1175370416}
   cannonBall2: {fileID: 1638283870}
   cannonBall3: {fileID: 32649453}

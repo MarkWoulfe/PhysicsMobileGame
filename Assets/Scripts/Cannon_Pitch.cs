@@ -34,8 +34,10 @@ public class Cannon_Pitch : MonoBehaviour
 
     void Start()
     {
-        //gameCamera = GameObject.Find("Camera");
         gameCameraScript = gameCamera.GetComponent<CameraFollow>();
+        newCannonBall = new GameObject();
+        newCannonBall.AddComponent<Rigidbody>();
+        newCannonBall.transform.position = cannonBall1.transform.position;
     }
 
     // Update is called once per frame
@@ -56,13 +58,21 @@ public class Cannon_Pitch : MonoBehaviour
             //fired = true;
 
             //Creates a new cannon ball based on the defaults defined in the editor
-            newCannonBall = (GameObject)Instantiate(cannonBall1, cannonBall1.transform.position, Quaternion.identity);
+            newCannonBall = (GameObject)Instantiate(cannonBall1);
+            //Moves the new cannonball to the position of the original
+            newCannonBall.transform.position = cannonBall1.transform.position;
             //Call the fire function for the new cannon ball
             newCannonBall.GetComponent<cannon_ball>().fire(transform.position, angle.z);
         }
 
-        //Vector3 cPos = newCannonBall.transform.position;
-
-        //gameCameraScript.MoveCamera(cPos);
+        if (newCannonBall.rigidbody.velocity.x < 1)
+        {
+            gameCameraScript.MoveCamera(cannonBall1.transform.position);
+        }
+        else
+        {
+            //Moves the camera to follow the new cannon ball
+            gameCameraScript.MoveCamera(newCannonBall.transform.position);
+        }
     }
 }
