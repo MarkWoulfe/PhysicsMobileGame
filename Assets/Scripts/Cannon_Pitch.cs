@@ -5,6 +5,7 @@ public class Cannon_Pitch : MonoBehaviour
 {
 	//the angle to be used for our cannon slider
 	public float cannonAngle = 0.0f;
+	public GUISkin myGUISkin;
 
     //The cannon ball object
     public GameObject cannonBall1;
@@ -13,7 +14,7 @@ public class Cannon_Pitch : MonoBehaviour
     public GameObject cannonBall4;
 
 	//have the slider scale to the users device
-	float sliderWidth = Screen.width * 0.4f;
+	float sliderWidth = Screen.width * 0.05f;
 	float sliderHeight = Screen.height-50;
 
     //Keeps track if the cannon has been fired or not
@@ -21,6 +22,8 @@ public class Cannon_Pitch : MonoBehaviour
 
 	//draw our slider
 	void OnGUI() {
+		GUI.skin = myGUISkin;
+		GUI.skin.verticalSlider.fixedWidth = sliderWidth;
 		cannonAngle = GUI.VerticalSlider(new Rect(25, 25, sliderWidth, sliderHeight), cannonAngle, 45.0f, 0.0f);
 	}
 

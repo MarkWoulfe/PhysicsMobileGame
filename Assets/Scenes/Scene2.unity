@@ -303,6 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cannonAngle: 0
+  myGUISkin: {fileID: 0}
   rotateSpeed: 100
   cannonBall: {fileID: 697472844}
 --- !u!1 &474302132
