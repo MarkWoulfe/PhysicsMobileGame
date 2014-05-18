@@ -15,7 +15,7 @@ public class cannon_ball : MonoBehaviour {
 
 	void Update() {
 
-		if (Input.GetKeyDown ("space") || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began)) {
+		if (Input.GetKeyDown ("space") || (Input.touchCount == 2 && Input.GetTouch(1).phase == TouchPhase.Began)) {
 
             angle = transform.position - cannon.transform.position;
 

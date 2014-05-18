@@ -4,6 +4,8 @@ using System.Collections;
 public class Cannon_Pitch : MonoBehaviour
 {
 
+	public float cannonAngle = 0.0f;
+
     public int rotateSpeed = 10;
     public GameObject cannonBall;
 
@@ -11,11 +13,9 @@ public class Cannon_Pitch : MonoBehaviour
 
     bool fired = false;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
+	void OnGUI() {
+		cannonAngle = GUI.VerticalSlider(new Rect(25, 25, 100, 300), cannonAngle, 45.0f, 0.0f);
+	}
 
     // Update is called once per frame
     void Update()
@@ -33,7 +33,7 @@ public class Cannon_Pitch : MonoBehaviour
             transform.Rotate(Vector3.forward, -rotateSpeed * Time.deltaTime);
             pitchedTurret = true;
         }
-        if (Input.GetKeyDown("space") || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began))
+        if (Input.GetKeyDown("space") || (Input.touchCount == 2 && Input.GetTouch(1).phase == TouchPhase.Began))
         {
             fired = true;
         }

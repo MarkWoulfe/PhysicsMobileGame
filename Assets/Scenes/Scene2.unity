@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d39b19f6a30b0e4b8246f9fdb6ebe95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cannonAngle: 0
   rotateSpeed: 100
   cannonBall: {fileID: 697472844}
 --- !u!1 &474302132
@@ -1072,8 +1073,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1953964118}
   - 33: {fileID: 1953964117}
-  - 64: {fileID: 1953964116}
   - 23: {fileID: 1953964115}
+  - 65: {fileID: 1953964116}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -1102,8 +1103,8 @@ Renderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
---- !u!64 &1953964116
-MeshCollider:
+--- !u!65 &1953964116
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1112,9 +1113,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Size: {x: 10, y: 2.22044605e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1953964117
 MeshFilter:
   m_ObjectHideFlags: 0
