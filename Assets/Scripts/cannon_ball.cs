@@ -3,30 +3,27 @@ using System.Collections;
 
 public class cannon_ball : MonoBehaviour {
 
+    //Sets the power to launch the cannon ball
 	public float power;
-	public Vector3 angle;
-
+    //The cannon object
     public GameObject cannon;
 
-	void start(){
-
-	}
-
-	void Update() {
-
-	}
-
+    //Fires the cannon ball
     public void fire(Vector3 p, float a)
     {
+        //Rotate the ball so that it is at the end of the cannon
         transform.RotateAround(p, Vector3.forward, a);
 
+        //Scale the object up so that the object is not at 0, 0, 0 (default value)
         transform.localScale = new Vector3(20, 20, 20);
 
-        angle = transform.position - cannon.transform.position;
-
-        angle.Normalize();
-
-        rigidbody.AddForce(angle * power);
+        //Gets the direction between the cannon and the ball
+        Vector3 dir = transform.position - cannon.transform.position;
+        //Normalises the vector
+        dir.Normalize();
+        //Adds force in the correct direction
+        rigidbody.AddForce(dir * power);
+        //Makes sure that gravity is acting on the ball
         rigidbody.useGravity = true;
     }
 }
