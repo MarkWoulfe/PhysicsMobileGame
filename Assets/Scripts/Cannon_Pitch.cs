@@ -14,6 +14,9 @@ public class Cannon_Pitch : MonoBehaviour
     public GameObject cannonBall4;
 
     GameObject newCannonBall;
+    float shotTimer = 0;
+    float shotCount = 0;
+    float shotLimit = 3;
 
     public GameObject gameCamera;
     private CameraFollow gameCameraScript;
@@ -35,9 +38,13 @@ public class Cannon_Pitch : MonoBehaviour
 
     void Start()
     {
+        //Stores the script on the camera
         gameCameraScript = gameCamera.GetComponent<CameraFollow>();
+        //Creates a new cannon ball object
         newCannonBall = new GameObject();
+        //Adds a rigid body to the new cannon ball
         newCannonBall.AddComponent<Rigidbody>();
+        //Moves it to the position of the camera
         newCannonBall.transform.position = cannonBall1.transform.position;
     }
 
@@ -54,9 +61,9 @@ public class Cannon_Pitch : MonoBehaviour
         transform.localEulerAngles = angle;
 
         //If the space key is pressed or a mobile screen is tapped and the cannon has not already been fired
-        if ((Input.GetKeyDown("space") || (Input.touchCount == 2 && Input.GetTouch(1).phase == TouchPhase.Began)) && fired == false)
+        if ((Input.GetKeyDown("space") || (Input.touchCount == 2 && Input.GetTouch(1).phase == TouchPhase.Began)) && fired == false && newCannonBall.rigidbody.velocity.x < 1)
         {
-            //fired = true;
+            fired = true;
 
             //Creates a new cannon ball based on the defaults defined in the editor
             newCannonBall = (GameObject)Instantiate(cannonBall1);
@@ -64,16 +71,37 @@ public class Cannon_Pitch : MonoBehaviour
             newCannonBall.transform.position = cannonBall1.transform.position;
             //Call the fire function for the new cannon ball
             newCannonBall.GetComponent<cannon_ball>().fire(transform.position, angle.z);
+            //Reset the timer back to 0
+            shotTimer = 0;
+            //Increase the amount of shots taken
+            shotCount++;
         }
 
+        //Keeps track of how long the balls velocity is less than 1
         if (newCannonBall.rigidbody.velocity.x < 1)
         {
-            gameCameraScript.MoveCamera(cannonBall1.transform.position);
+            shotTimer += Time.deltaTime;
         }
         else
         {
-            //Moves the camera to follow the new cannon ball
+            shotTimer = 0;
+        }
+
+        //If the cannon balls velocity is less than 1 for more than 2 seconds jump back to the cannon
+        if (shotTimer < 2.0f)
+        {
+            //Moves the camera to follow the cannon
             gameCameraScript.MoveCamera(newCannonBall.transform.position);
+        }
+        else
+        {
+            //Allow another shot to be fired it is less than the limit
+            if (shotCount < shotLimit)
+            {
+                fired = false;
+            }
+            //Moves the camera to follow the new cannon ball
+            gameCameraScript.MoveCamera(cannonBall1.transform.position);
         }
     }
 }
