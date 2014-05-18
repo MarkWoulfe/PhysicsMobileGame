@@ -557,6 +557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d39b19f6a30b0e4b8246f9fdb6ebe95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cannonAngle: 0
   rotateSpeed: 100
   cannonBall: {fileID: 697472844}
 --- !u!1 &454613570
@@ -843,8 +844,8 @@ GameObject:
   - 54: {fileID: 697472847}
   - 114: {fileID: 697472846}
   m_Layer: 0
-  m_Name: CannonBall2
-  m_TagString: Untagged
+  m_Name: CannonBall
+  m_TagString: CannonBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1012,6 +1013,14 @@ Prefab:
       propertyPath: cannon
       value: 
       objectReference: {fileID: 331782927}
+    - target: {fileID: 100000, guid: a41ef63d1ae02c24f81af66f6776d3bd, type: 2}
+      propertyPath: m_Name
+      value: CannonBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a41ef63d1ae02c24f81af66f6776d3bd, type: 2}
+      propertyPath: m_TagString
+      value: CannonBall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a41ef63d1ae02c24f81af66f6776d3bd, type: 2}
   m_RootGameObject: {fileID: 697472844}

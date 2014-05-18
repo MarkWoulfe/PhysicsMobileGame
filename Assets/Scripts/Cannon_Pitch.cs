@@ -17,6 +17,11 @@ public class Cannon_Pitch : MonoBehaviour
 		cannonAngle = GUI.VerticalSlider(new Rect(25, 25, 100, 300), cannonAngle, 45.0f, 0.0f);
 	}
 
+    void start()
+    { 
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -65,6 +70,13 @@ public class Cannon_Pitch : MonoBehaviour
 
         if (scaleValue < 20 && fired == true)
             scaleValue += 2.0f;
+
+        if(scaleValue > 20)
+        {
+            cannonBall.GetComponent<cannon_ball>().fire();
+
+            scaleValue = 20;
+        }
 
         cannonBall.transform.localScale = new Vector3(scaleValue, scaleValue, scaleValue);
     }

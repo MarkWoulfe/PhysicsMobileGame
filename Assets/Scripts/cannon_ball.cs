@@ -7,7 +7,6 @@ public class cannon_ball : MonoBehaviour {
 	public Vector3 angle;
 
     public GameObject cannon;
-    bool fired = false;
 
 	void start(){
 
@@ -15,20 +14,15 @@ public class cannon_ball : MonoBehaviour {
 
 	void Update() {
 
-		if (Input.GetKeyDown ("space") || (Input.touchCount == 2 && Input.GetTouch(1).phase == TouchPhase.Began)) {
-
-            angle = transform.position - cannon.transform.position;
-
-            angle.Normalize();
-		}
-
-        float scaleValue = transform.localScale.x;
-
-        if (scaleValue >= 20 && fired == false)
-        {
-            fired = true;
-            rigidbody.AddForce(angle * power);
-            rigidbody.useGravity = true;
-        }
 	}
+
+    public void fire()
+    {
+        angle = transform.position - cannon.transform.position;
+
+        angle.Normalize();
+
+        rigidbody.AddForce(angle * power);
+        rigidbody.useGravity = true;
+    }
 }
