@@ -7,7 +7,10 @@ public class Cannon_Pitch : MonoBehaviour
 	public float cannonAngle = 0.0f;
 
     //The cannon ball object
-    public GameObject cannonBall;
+    public GameObject cannonBall1;
+    public GameObject cannonBall2;
+    public GameObject cannonBall3;
+    public GameObject cannonBall4;
 
 	//have the slider scale to the users device
 	float sliderWidth = Screen.width * 0.4f;
@@ -36,9 +39,10 @@ public class Cannon_Pitch : MonoBehaviour
         //If the space key is pressed or a mobile screen is tapped and the cannon has not already been fired
         if ((Input.GetKeyDown("space") || (Input.touchCount == 2 && Input.GetTouch(1).phase == TouchPhase.Began)) && fired == false)
         {
-            fired = true;
+            //fired = true;
+            GameObject newCannonBall = (GameObject)Instantiate(cannonBall1, cannonBall1.transform.position, Quaternion.identity);
             //Call the fire function for the cannon ball
-            cannonBall.GetComponent<cannon_ball>().fire(transform.position, angle.z);
+            newCannonBall.GetComponent<cannon_ball>().fire(transform.position, angle.z);
         }
     }
 }

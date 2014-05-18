@@ -15,7 +15,7 @@ public class cannon_ball : MonoBehaviour {
         transform.RotateAround(p, Vector3.forward, a);
 
         //Scale the object up so that the object is not at 0, 0, 0 (default value)
-        transform.localScale = new Vector3(20, 20, 20);
+        transform.localScale = new Vector3(1, 1, 1);
 
         //Gets the direction between the cannon and the ball
         Vector3 dir = transform.position - cannon.transform.position;
