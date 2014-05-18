@@ -15,6 +15,7 @@ public class cannon_ball : MonoBehaviour {
 
 	void Update() {
 
+		//have the user fire based on the spacebar for debugging or touch controls
 		if (Input.GetKeyDown ("space") || (Input.touchCount == 2 && Input.GetTouch(1).phase == TouchPhase.Began)) {
 
             angle = transform.position - cannon.transform.position;
@@ -27,7 +28,9 @@ public class cannon_ball : MonoBehaviour {
         if (scaleValue >= 20 && fired == false)
         {
             fired = true;
+			//add a force to the cannonball
             rigidbody.AddForce(angle * power);
+			//have gravity start affecting it
             rigidbody.useGravity = true;
         }
 	}
