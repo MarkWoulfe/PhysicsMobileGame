@@ -29,6 +29,7 @@ public class Cannon_Pitch : MonoBehaviour
 	void OnGUI() {
 		GUI.skin = myGUISkin;
 		GUI.skin.verticalSlider.fixedWidth = sliderWidth;
+		GUI.skin.verticalSliderThumb.fixedWidth = sliderWidth;
 		cannonAngle = GUI.VerticalSlider(new Rect(25, 25, sliderWidth, sliderHeight), cannonAngle, 45.0f, 0.0f);
 	}
 
