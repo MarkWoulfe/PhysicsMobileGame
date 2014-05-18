@@ -23,7 +23,6 @@ public class cannon_ball : MonoBehaviour {
 		}
 
         float scaleValue = transform.localScale.x;
-        print(scaleValue);
 
         if (scaleValue >= 20 && fired == false)
         {
