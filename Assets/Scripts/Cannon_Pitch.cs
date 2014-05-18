@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Cannon_Pitch : MonoBehaviour
 {
-
+	//the angle to be used for our cannon slider
 	public float cannonAngle = 0.0f;
 
     public int rotateSpeed = 10;
@@ -11,10 +11,15 @@ public class Cannon_Pitch : MonoBehaviour
 
     float scaleValue = 0.01f;
 
+	//have the slider scale to the users device
+	float sliderWidth = Screen.width * 0.4f;
+	float sliderHeight = Screen.height-50;
+
     bool fired = false;
 
+	//draw our slider
 	void OnGUI() {
-		cannonAngle = GUI.VerticalSlider(new Rect(25, 25, 100, 300), cannonAngle, 45.0f, 0.0f);
+		cannonAngle = GUI.VerticalSlider(new Rect(25, 25, sliderWidth, sliderHeight), cannonAngle, 45.0f, 0.0f);
 	}
 
     void start()
@@ -27,6 +32,8 @@ public class Cannon_Pitch : MonoBehaviour
     {
         Vector3 angle = transform.localEulerAngles;
         bool pitchedTurret = false;
+
+		angle.z = cannonAngle;
 
         if (Input.GetKey("up") && (angle.z < 45.1f || angle.z > 359.9f))
         {
