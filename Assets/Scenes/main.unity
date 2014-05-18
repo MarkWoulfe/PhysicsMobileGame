@@ -710,6 +710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cannonAngle: 0
+  myGUISkin: {fileID: 0}
   cannonBall1: {fileID: 1175370416}
   cannonBall2: {fileID: 1638283870}
   cannonBall3: {fileID: 32649453}
