@@ -4,12 +4,12 @@ using System.Collections;
 public class cannon_ball : MonoBehaviour {
 
     //Sets the power to launch the cannon ball
-	public float power;
+    public float power;
     //The cannon object
     public GameObject cannon;
 
     //Fires the cannon ball
-    public void fire(Vector3 p, float a)
+    public void fire(Vector3 p, float a, float pow)
     {
         //Rotate the ball so that it is at the end of the cannon
         transform.RotateAround(p, Vector3.forward, a);
@@ -22,7 +22,7 @@ public class cannon_ball : MonoBehaviour {
         //Normalises the vector
         dir.Normalize();
         //Adds force in the correct direction
-        rigidbody.AddForce(dir * power);
+        rigidbody.AddForce(dir * pow);
         //Makes sure that gravity is acting on the ball
         rigidbody.useGravity = true;
     }
