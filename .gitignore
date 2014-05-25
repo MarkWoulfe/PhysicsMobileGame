@@ -15,7 +15,10 @@
 # *.unityproj
 ProjectSettings/Physics2DSettings.asset
 
-Library/
+Library/FailedAssetImports.txt
+Library/cache/
+Library/previews/
+Library/ScriptAssemblies
 Temp/
 Build/
 
