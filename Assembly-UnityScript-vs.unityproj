@@ -46,25 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Lux\Demos\00 Shared assets\keyboardInput03.js" />
-     <Compile Include="Assets\Lux\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" />
-     <Compile Include="Assets\Lux\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" />
-     <Compile Include="Assets\Lux\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.js" />
-     <None Include="Assets\Lux\Lux Shader\LuxCore\Resources\Lux Internal-PrePassLighting.shader" />
-     <None Include="Assets\Lux\Lux Shader\Lux Bumped Specular.shader" />
-     <None Include="Assets\Lux\Lux Shader\Lux Bumped Specular Metalness.shader" />
-     <None Include="Assets\Lux\Lux Shader\Lux Bumped Diffuse.shader" />
-     <None Include="Assets\Lux\Lux Shader\LuxCore\LuxLightingDirect.cginc" />
-     <None Include="Assets\Lux\_Lux Documentation.txt" />
-     <None Include="Assets\Lux\__Lux Readme first important!!!!!!.txt" />
-     <None Include="Assets\Lux\Lux Scripts\Lux Cubemapper\_Lux Cubemapper.txt" />
-     <None Include="Assets\Lux\Lux Shader\LuxCore\LuxVertFunc.cginc" />
-     <None Include="Assets\Lux\Lux Shader\LuxCore\Resources\Camera-DepthNormalTexture.shader" />
-     <None Include="Assets\Lux\Demos\00 Shared assets\fontMaterialsetc\FontZtest.shader" />
-     <None Include="Assets\Lux\Lux Shader\LuxCore\Resources\Camera-DepthTexture.shader" />
-     <None Include="Assets\Lux\Lux Shader\Lux Bumped Specular Materialtest.shader" />
-     <None Include="Assets\Lux\Lux Shader\LuxCore\LuxLightingAmbient.cginc" />
-     <None Include="Assets\Lux\Demos\01 Lux Base Demo\Cerberus Metalness Test\Disclaimer.txt" />
+     <Compile Include="Assets\StonyGroundPackage\InstructionsScene\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" />
+     <Compile Include="Assets\StonyGroundPackage\InstructionsScene\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" />
+     <Compile Include="Assets\StonyGroundPackage\InstructionsScene\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.js" />
+     <Compile Include="Assets\StonyGroundPackage\InstructionsScene\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" />
+     <Compile Include="Assets\StonyGroundPackage\InstructionsScene\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" />
+     <None Include="Assets\StonyGroundPackage\InstructionsScene\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="Assets\sky5X\README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
