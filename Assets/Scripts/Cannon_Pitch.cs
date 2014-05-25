@@ -49,20 +49,19 @@ public class Cannon_Pitch : MonoBehaviour
 
 		if (GUI.Button (new Rect (25 + sliderWidth + 25, 25, sliderWidth * 2, sliderWidth * 2), "-")) {
 			if (pow > 1000) {
-				pow -= 1000;
+				pow -= 500;
 			}	
 
 		}
 
 		if (GUI.Button (new Rect (25 + sliderWidth + 25 + sliderWidth * 2 + 25, 25, sliderWidth * 2, sliderWidth * 2), "+")) {
-			if (pow < 5000) {
-				pow += 1000;
+			if (pow < 4000) {
+				pow += 500;
 			}					
 		}
 
-		if (GUI.Button (new Rect (25 + sliderWidth + 25, 25 + sliderWidth * 2 + 25, sliderWidth * 4 + 25, sliderWidth * 2), "Fire " + pow)) {
+		if (GUI.Button (new Rect (25 + sliderWidth + 25, 25 + sliderWidth * 2 + 25, sliderWidth * 4 + 25, sliderWidth * 2), pow + " Fire")) {
 			firePressed = true;
-			Debug.Log(pow);
 		}
 
 	}
