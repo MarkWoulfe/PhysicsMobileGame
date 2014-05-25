@@ -17,9 +17,7 @@ ProjectSettings/Physics2DSettings.asset
 
 Library/
 Temp/
-#Obj/
 Build/
-#ExportedObj/
 
 # ============ #
 # OS generated #
