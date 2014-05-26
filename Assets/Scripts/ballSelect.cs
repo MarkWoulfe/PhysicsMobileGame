@@ -1,35 +1,51 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ballSelect : MonoBehaviour {
+public class ballSelect : MonoBehaviour
+{
 
-	public Texture football;
-	public Texture bowlingball;
-	public Texture leadball;
-	public Texture cannonball;
+		public Texture football;
+		public Texture bowlingball;
+		public Texture leadball;
+		public Texture cannonball;
 
-	float buttonWidth, buttonHeight;
+		public GameObject g_football;
+		public GameObject g_bowlingball;
+		public GameObject g_leadball;
+		public GameObject g_cannonball;
 
-	void Start () {
+		float buttonWidth, buttonHeight;
 
-		buttonWidth = (Screen.width / 2) - 50;
-		buttonHeight = (Screen.height / 2) - 50;
+		void Start ()
+		{
 
-	}
+				buttonWidth = (Screen.width / 2) - 50;
+				buttonHeight = (Screen.height / 2) - 50;
 
-	void OnGUI(){
+		}
 
-		if (GUI.Button(new Rect(50, 50, buttonWidth, buttonHeight), "Football"))
-			Debug.Log("1");
+		void OnGUI ()
+		{
 
-		if (GUI.Button(new Rect(50 + buttonWidth, 50, buttonWidth, buttonHeight), "Bowlingball"))
-			Debug.Log("2");
+				if (GUI.Button (new Rect (50, 50, buttonWidth, buttonHeight), "Football")) {
+						DontDestroyOnLoad(g_football);
+						Application.LoadLevel("main");
+				}
 
-		if (GUI.Button(new Rect(50, 50+buttonHeight, buttonWidth, buttonHeight), "Leadball"))
-			Debug.Log("3");
+				if (GUI.Button (new Rect (50 + buttonWidth, 50, buttonWidth, buttonHeight), "Bowlingball")) {
+						DontDestroyOnLoad(g_bowlingball);
+						Application.LoadLevel("main");
+				}
 
-		if (GUI.Button(new Rect(50 + buttonWidth, 50+buttonHeight, buttonWidth, buttonHeight), "Cannonball"))
-			Debug.Log("4");
+				if (GUI.Button (new Rect (50, 50 + buttonHeight, buttonWidth, buttonHeight), "Leadball")) {
+						DontDestroyOnLoad(g_leadball);
+						Application.LoadLevel("main");
+				}
 
-	}
+				if (GUI.Button (new Rect (50 + buttonWidth, 50 + buttonHeight, buttonWidth, buttonHeight), "Cannonball")) {
+						DontDestroyOnLoad(g_cannonball);
+						Application.LoadLevel("main");
+				}
+
+		}
 }
