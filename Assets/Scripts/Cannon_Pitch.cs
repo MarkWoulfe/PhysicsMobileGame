@@ -125,7 +125,8 @@ public class Cannon_Pitch : MonoBehaviour
 				}*/
 
 		//Keeps track of how long the balls velocity is less than 1
-		if (newCannonBall.rigidbody.velocity.x < 1) {
+        if (newCannonBall.rigidbody.velocity.x < 1 && newCannonBall.rigidbody.velocity.y < 1)
+        {
 			shotTimer += Time.deltaTime;
 		} else {
 			shotTimer = 0;
