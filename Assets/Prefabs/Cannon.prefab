@@ -420,7 +420,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: d748922730b887a4ab1067b83b390bae, type: 2}
+  - {fileID: 2100000, guid: 07d6c8686b698254eb8df8b21f424914, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -441,7 +441,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: d748922730b887a4ab1067b83b390bae, type: 2}
+  - {fileID: 2100000, guid: 64ec28394f7970b4cac1c58a22f9e1f5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -606,12 +606,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cannonAngle: 0
-  myGUISkin: {fileID: 0}
+  myGUISkin: {fileID: 11400000, guid: a892250a5734d4ec2b0c65d67ad3a0db, type: 2}
   cannonBall1: {fileID: 100018}
   cannonBall2: {fileID: 100016}
   cannonBall3: {fileID: 100020}
   cannonBall4: {fileID: 100010}
-  gameCamera: {fileID: 100000, guid: ce5feef605a70024f8f175b8893d89fa, type: 2}
+  gameCamera: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -682,7 +682,7 @@ SphereCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
-  m_Material: {fileID: 13400000, guid: 562133603bee4b542beb83312cf24cd2, type: 2}
+  m_Material: {fileID: 13400000, guid: 7a90edb6c25ef654ca33b34db72fac90, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -694,7 +694,7 @@ SphereCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100018}
-  m_Material: {fileID: 13400000, guid: 562133603bee4b542beb83312cf24cd2, type: 2}
+  m_Material: {fileID: 13400000, guid: 75ab58140e09b1546a032691d1e8fcb7, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
