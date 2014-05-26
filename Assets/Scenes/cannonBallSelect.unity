@@ -393,10 +393,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53954e36268bab469934504dd2b5cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  football: {fileID: 0}
-  bowlingball: {fileID: 0}
-  leadball: {fileID: 0}
-  cannonball: {fileID: 0}
+  football: {fileID: 2800000, guid: f34aa42a70c5173489934efe036b349c, type: 3}
+  bowlingball: {fileID: 2800000, guid: 0101b2c1950fdfd4ea843d9af553b272, type: 3}
+  leadball: {fileID: 2800000, guid: e32312e76df7dcc4085bbdd360104b17, type: 3}
+  cannonball: {fileID: 2800000, guid: e18c95b713e9d3845b3cfea362ffcf43, type: 3}
   g_football: {fileID: 1438666562}
   g_bowlingball: {fileID: 1108068352}
   g_leadball: {fileID: 464192311}
