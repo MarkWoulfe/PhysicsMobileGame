@@ -8,6 +8,7 @@ public class Cannon_Pitch : MonoBehaviour
 	public GUISkin myGUISkin;
 
 	//The seperate cannon ball object defaults
+    GameObject cannonBall;
 	public GameObject cannonBall1;
 	public GameObject cannonBall2;
 	public GameObject cannonBall3;
@@ -68,6 +69,8 @@ public class Cannon_Pitch : MonoBehaviour
 
 	void Start ()
 	{
+        cannonBall = GameObject.FindGameObjectWithTag("CannonBall");
+
 		//Stores the script on the camera
 		gameCameraScript = gameCamera.GetComponent<CameraFollow> ();
 		//Creates a new cannon ball object
@@ -75,7 +78,7 @@ public class Cannon_Pitch : MonoBehaviour
 		//Adds a rigid body to the new cannon ball
 		newCannonBall.AddComponent<Rigidbody> ();
 		//Moves it to the position of the camera
-		newCannonBall.transform.position = cannonBall1.transform.position;
+		newCannonBall.transform.position = cannonBall.transform.position;
 	}
 
 	// Update is called once per frame
@@ -94,9 +97,9 @@ public class Cannon_Pitch : MonoBehaviour
 			fired = true;
 					
 			//Creates a new cannon ball based on the defaults defined in the editor
-			newCannonBall = (GameObject)Instantiate (cannonBall1);
+			newCannonBall = (GameObject)Instantiate (cannonBall);
 			//Moves the new cannonball to the position of the original
-			newCannonBall.transform.position = cannonBall1.transform.position;
+			newCannonBall.transform.position = cannonBall.transform.position;
 			//Call the fire function for the new cannon ball
 			newCannonBall.GetComponent<cannon_ball> ().fire (transform.position, angle.z, pow);
 			//Reset the timer back to 0
@@ -147,7 +150,7 @@ public class Cannon_Pitch : MonoBehaviour
                 Application.LoadLevel(Application.loadedLevel);
             }
 			//Moves the camera to follow the new cannon ball
-			gameCameraScript.MoveCamera (cannonBall1.transform.position);
+			gameCameraScript.MoveCamera (cannonBall.transform.position);
 			disableGUI = false;
 		}
 	}

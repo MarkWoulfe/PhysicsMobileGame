@@ -5,8 +5,6 @@ public class cannon_ball : MonoBehaviour {
 
     //Sets the power to launch the cannon ball
     public float power;
-    //The cannon object
-    public GameObject cannon;
 
     //Fires the cannon ball
     public void fire(Vector3 p, float a, float pow)
@@ -18,7 +16,7 @@ public class cannon_ball : MonoBehaviour {
         transform.localScale = new Vector3(1, 1, 1);
 
         //Gets the direction between the cannon and the ball
-        Vector3 dir = transform.position - cannon.transform.position;
+        Vector3 dir = transform.position - p;
         //Normalises the vector
         dir.Normalize();
         //Adds force in the correct direction
