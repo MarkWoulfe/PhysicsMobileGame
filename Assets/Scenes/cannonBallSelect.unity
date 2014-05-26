@@ -88,6 +88,7 @@ GameObject:
   - 81: {fileID: 809612758}
   - 45: {fileID: 809612757}
   - 114: {fileID: 809612763}
+  - 114: {fileID: 809612764}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -175,3 +176,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00cb39360f9ba84e972eea656a28cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &809612764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 809612756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53954e36268bab469934504dd2b5cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  football: {fileID: 0}
+  bowlingball: {fileID: 0}
+  leadball: {fileID: 0}
+  cannonball: {fileID: 0}
