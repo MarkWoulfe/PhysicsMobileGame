@@ -147,7 +147,7 @@ public class Cannon_Pitch : MonoBehaviour
 			}
             else
             {
-                Application.LoadLevel(Application.loadedLevel);
+                Application.LoadLevel("cannonBallSelect");
             }
 			//Moves the camera to follow the new cannon ball
 			gameCameraScript.MoveCamera (cannonBall.transform.position);
