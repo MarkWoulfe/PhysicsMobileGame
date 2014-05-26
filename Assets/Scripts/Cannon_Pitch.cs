@@ -9,10 +9,6 @@ public class Cannon_Pitch : MonoBehaviour
 
 	//The seperate cannon ball object defaults
     GameObject cannonBall;
-	public GameObject cannonBall1;
-	public GameObject cannonBall2;
-	public GameObject cannonBall3;
-	public GameObject cannonBall4;
 	GameObject newCannonBall;
 	float shotTimer = 1;
 	float shotCount = 0;
@@ -136,7 +132,7 @@ public class Cannon_Pitch : MonoBehaviour
 		}
 
 		//If the cannon balls velocity is less than 1 for more than 2 seconds jump back to the cannon
-		if (shotTimer < 1.0f) {
+		if (shotTimer < 1.5f) {
 			//Moves the camera to follow the cannon
 			gameCameraScript.MoveCamera (newCannonBall.transform.position);
 			disableGUI = true;
@@ -148,6 +144,7 @@ public class Cannon_Pitch : MonoBehaviour
             else
             {
                 Application.LoadLevel("cannonBallSelect");
+                DestroyObject(cannonBall);
             }
 			//Moves the camera to follow the new cannon ball
 			gameCameraScript.MoveCamera (cannonBall.transform.position);

@@ -107,7 +107,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 2000
-  cannon: {fileID: 0}
 --- !u!54 &464192313
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -211,7 +210,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 2000
-  cannon: {fileID: 0}
 --- !u!54 &740691024
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -436,7 +434,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 4000
-  cannon: {fileID: 0}
 --- !u!54 &1108068354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -540,7 +537,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 2000
-  cannon: {fileID: 0}
 --- !u!54 &1438666564
 Rigidbody:
   m_ObjectHideFlags: 0
