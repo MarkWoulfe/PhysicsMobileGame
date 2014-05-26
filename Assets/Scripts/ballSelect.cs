@@ -19,7 +19,7 @@ public class ballSelect : MonoBehaviour
 
 				buttonWidth = (Screen.width / 2) - 100;
 				buttonHeight = (Screen.height / 2) - 100;
-				fontSize = (int)buttonWidth/20;
+				fontSize = (int)buttonWidth/15;
 
 		}
 
