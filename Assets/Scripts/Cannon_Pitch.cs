@@ -141,6 +141,10 @@ public class Cannon_Pitch : MonoBehaviour
 			if (shotCount < shotLimit) {
 				fired = false;
 			}
+            else
+            {
+                Application.LoadLevel(Application.loadedLevel);
+            }
 			//Moves the camera to follow the new cannon ball
 			gameCameraScript.MoveCamera (cannonBall1.transform.position);
 			disableGUI = false;
