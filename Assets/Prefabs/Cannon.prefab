@@ -98,7 +98,7 @@ GameObject:
   - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: CannonBall4
-  m_TagString: Untagged
+  m_TagString: CannonBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,7 +168,7 @@ GameObject:
   - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: CannonBall1
-  m_TagString: Untagged
+  m_TagString: CannonBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ GameObject:
   - 114: {fileID: 11400008}
   m_Layer: 0
   m_Name: CannonBall3
-  m_TagString: Untagged
+  m_TagString: CannonBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -606,6 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cannonAngle: 0
+  myGUISkin: {fileID: 0}
   cannonBall1: {fileID: 100018}
   cannonBall2: {fileID: 100016}
   cannonBall3: {fileID: 100020}

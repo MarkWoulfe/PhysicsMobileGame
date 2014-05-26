@@ -8,7 +8,7 @@ PhysicMaterial:
   m_Name: Slippery
   dynamicFriction: 1
   staticFriction: 1
-  bounciness: 1
+  bounciness: .200000003
   frictionCombine: 0
   bounceCombine: 0
   frictionDirection2: {x: 0, y: 0, z: 0}

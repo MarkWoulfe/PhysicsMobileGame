@@ -23,6 +23,7 @@ public class cannon_ball : MonoBehaviour {
         dir.Normalize();
         //Adds force in the correct direction
         rigidbody.AddForce(dir * pow);
+        rigidbody.AddTorque(new Vector3(0,0,-1) * pow);
         //Makes sure that gravity is acting on the ball
         rigidbody.useGravity = true;
     }
