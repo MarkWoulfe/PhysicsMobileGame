@@ -17,8 +17,8 @@ public class ballSelect : MonoBehaviour
 		void Start ()
 		{
 
-				buttonWidth = (Screen.width / 2) - 100;
-				buttonHeight = (Screen.height / 2) - 100;
+				buttonWidth = (Screen.width / 2) - 75;
+				buttonHeight = (Screen.height / 2) - 150;
 				fontSize = (int)buttonWidth/15;
 
 		}
@@ -28,23 +28,26 @@ public class ballSelect : MonoBehaviour
 				
 				GUI.skin.button.fontSize = fontSize;
 				GUI.skin.button.imagePosition = ImagePosition.ImageAbove;
+				GUI.skin.box.fontSize = fontSize*3;
 
-				if (GUI.Button (new Rect (50, 50, buttonWidth, buttonHeight), new GUIContent ("Football \n Mass - " + g_football.rigidbody.mass, football))) {
+				GUI.Box(new Rect(10,10,Screen.width-20,Screen.height-20), "Pick a Cannonball!");
+
+				if (GUI.Button (new Rect (50, 225, buttonWidth, buttonHeight), new GUIContent ("Football \n Mass - " + g_football.rigidbody.mass, football))) {
 						DontDestroyOnLoad (g_football);
 						Application.LoadLevel ("main");
 				}
 
-				if (GUI.Button (new Rect (150 + buttonWidth, 50, buttonWidth, buttonHeight), new GUIContent ("Bowling Ball \n Mass - " + g_bowlingball.rigidbody.mass, bowlingball))) {
+				if (GUI.Button (new Rect (100 + buttonWidth, 225, buttonWidth, buttonHeight), new GUIContent ("Bowling Ball \n Mass - " + g_bowlingball.rigidbody.mass, bowlingball))) {
 						DontDestroyOnLoad (g_bowlingball);
 						Application.LoadLevel ("main");
 				}
 
-				if (GUI.Button (new Rect (50, 150 + buttonHeight, buttonWidth, buttonHeight), new GUIContent ("Cannonball \n Mass - " + g_cannonball.rigidbody.mass, cannonball))) {
+				if (GUI.Button (new Rect (50, 275 + buttonHeight, buttonWidth, buttonHeight), new GUIContent ("Cannonball \n Mass - " + g_cannonball.rigidbody.mass, cannonball))) {
 						DontDestroyOnLoad (g_cannonball);
 						Application.LoadLevel ("main");
 				}
 
-				if (GUI.Button (new Rect (150 + buttonWidth, 150 + buttonHeight, buttonWidth, buttonHeight), new GUIContent ("Leab Ball \n Mass - " + g_leadball.rigidbody.mass, leadball))) {
+				if (GUI.Button (new Rect (100 + buttonWidth, 275 + buttonHeight, buttonWidth, buttonHeight), new GUIContent ("Leab Ball \n Mass - " + g_leadball.rigidbody.mass, leadball))) {
 						DontDestroyOnLoad (g_leadball);
 						Application.LoadLevel ("main");
 				}

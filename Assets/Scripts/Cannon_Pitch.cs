@@ -3,15 +3,15 @@ using System.Collections;
 
 public class Cannon_Pitch : MonoBehaviour
 {
-		//the angle to be used for our cannon slider
-		public float cannonAngle = 0.0f;
 		public GUISkin myGUISkin;
 
 		//The seperate cannon ball object defaults
 		GameObject cannonBall;
 		GameObject newCannonBall;
+		//the angle to be used for our cannon slider
+		float cannonAngle = 0.0f;
 		float shotTimer = 1;
-		float shotCount = 0;
+		float shotCount = 0;	
 		float shotLimit = 3;
 		float pow = 1000;
 		bool firePressed = false;
@@ -38,24 +38,19 @@ public class Cannon_Pitch : MonoBehaviour
 						//make sure our slider scales to the device
 						GUI.skin.verticalSlider.fixedWidth = sliderWidth;
 						GUI.skin.verticalSliderThumb.fixedWidth = sliderWidth;
+						
+						GUI.skin.horizontalSlider.fixedHeight = sliderWidth;
+						GUI.skin.horizontalSliderThumb.fixedHeight = sliderWidth;
+						
 						GUI.skin.button.fontSize = (int)sliderWidth;
 						//draw our slider
 						cannonAngle = GUI.VerticalSlider (new Rect (25, 25, sliderWidth, sliderHeight), cannonAngle, 45.0f, 0.0f);
+						pow = GUI.HorizontalSlider (new Rect (25 + sliderWidth + 25, 25, (Screen.width/2) - (sliderWidth + 50), sliderWidth * 2), pow, 1000.0f, 3000.0f);
+
+						//1000 - 4000 / 25 + sliderWidth + 25,25, sliderWidth * 2
+
 			
-						if (GUI.Button (new Rect (25 + sliderWidth + 25, 25, sliderWidth * 2, sliderWidth * 2), "-")) {
-								if (pow > 1000) {
-										pow -= 500;
-								}	
-				
-						}
-			
-						if (GUI.Button (new Rect (25 + sliderWidth + 25 + sliderWidth * 2 + 25, 25, sliderWidth * 2, sliderWidth * 2), "+")) {
-								if (pow < 4000) {
-										pow += 500;
-								}					
-						}
-			
-						if (GUI.Button (new Rect (25 + sliderWidth + 25, 25 + sliderWidth * 2 + 25, sliderWidth * 4 + 25, sliderWidth * 2), pow + " Fire")) {
+						if (GUI.Button (new Rect (25 + sliderWidth + 25, 100 + sliderWidth, (Screen.width/2) - (sliderWidth + 50), sliderWidth * 2), "Fire")) {
 								firePressed = true;
 						}
 				}
