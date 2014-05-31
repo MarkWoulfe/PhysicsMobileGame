@@ -273,6 +273,7 @@ GameObject:
   - 33: {fileID: 294556235}
   - 23: {fileID: 294556234}
   - 111: {fileID: 294556233}
+  - 65: {fileID: 294556237}
   m_Layer: 0
   m_Name: Alder
   m_TagString: Untagged
@@ -337,6 +338,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 82419378}
+--- !u!65 &294556237
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 294556232}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 25.3148499, z: 1}
+  m_Center: {x: 0, y: 11.5319061, z: 0}
 --- !u!1001 &328059887
 Prefab:
   m_ObjectHideFlags: 0
@@ -492,6 +505,7 @@ GameObject:
   - 33: {fileID: 578487935}
   - 23: {fileID: 578487934}
   - 111: {fileID: 578487933}
+  - 65: {fileID: 578487937}
   m_Layer: 0
   m_Name: Alder
   m_TagString: Untagged
@@ -556,6 +570,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 82419378}
+--- !u!65 &578487937
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 578487932}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 25.3148499, z: 1}
+  m_Center: {x: 0, y: 11.5319061, z: 0}
 --- !u!1001 &590845408
 Prefab:
   m_ObjectHideFlags: 0
@@ -611,6 +637,7 @@ GameObject:
   - 33: {fileID: 611005785}
   - 23: {fileID: 611005784}
   - 111: {fileID: 611005783}
+  - 65: {fileID: 611005787}
   m_Layer: 0
   m_Name: Willow
   m_TagString: Untagged
@@ -675,6 +702,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 82419378}
+--- !u!65 &611005787
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 611005782}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 17.9450207, z: 2}
+  m_Center: {x: 0, y: 8.14446163, z: 0}
 --- !u!1 &776576297
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +752,7 @@ GameObject:
   - 33: {fileID: 835749020}
   - 23: {fileID: 835749019}
   - 111: {fileID: 835749018}
+  - 65: {fileID: 835749022}
   m_Layer: 0
   m_Name: Sycamore
   m_TagString: Untagged
@@ -777,6 +817,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 82419378}
+--- !u!65 &835749022
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 835749017}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 20.6250362, z: 2}
+  m_Center: {x: 0, y: 10.1419706, z: 0}
 --- !u!1001 &859099993
 Prefab:
   m_ObjectHideFlags: 0
@@ -938,6 +990,7 @@ GameObject:
   - 33: {fileID: 977178765}
   - 23: {fileID: 977178764}
   - 111: {fileID: 977178763}
+  - 65: {fileID: 977178767}
   m_Layer: 0
   m_Name: Sycamore
   m_TagString: Untagged
@@ -1002,6 +1055,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 82419378}
+--- !u!65 &977178767
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 977178762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 20.6250362, z: 2}
+  m_Center: {x: 0, y: 10.1419706, z: 0}
 --- !u!1 &1020074071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1176,7 @@ GameObject:
   - 33: {fileID: 1199758508}
   - 23: {fileID: 1199758507}
   - 111: {fileID: 1199758506}
+  - 65: {fileID: 1199758510}
   m_Layer: 0
   m_Name: Willow
   m_TagString: Untagged
@@ -1175,6 +1241,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 82419378}
+--- !u!65 &1199758510
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1199758505}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 17.9450207, z: 2}
+  m_Center: {x: 0, y: 8.14446163, z: 0}
 --- !u!1001 &1310434403
 Prefab:
   m_ObjectHideFlags: 0

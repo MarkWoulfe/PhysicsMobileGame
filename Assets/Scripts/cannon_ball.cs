@@ -9,6 +9,8 @@ public class cannon_ball : MonoBehaviour {
     //Fires the cannon ball
     public void fire(Vector3 p, float a, float pow)
     {
+        collider.enabled = true;
+
         //Rotate the ball so that it is at the end of the cannon
         transform.RotateAround(p, Vector3.forward, a);
 
