@@ -80,7 +80,6 @@ public class Cannon_Pitch : MonoBehaviour
 						shotLimit = 1;
 				}
 
-				Debug.Log (shotLimit);
 				//Stores the script on the camera
 				gameCameraScript = gameCamera.GetComponent<CameraFollow> ();
 				//Creates a new cannon ball object
