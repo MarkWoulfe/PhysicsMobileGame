@@ -11,8 +11,8 @@ public class Cannon_Pitch : MonoBehaviour
 		//the angle to be used for our cannon slider
 		float cannonAngle = 0.0f;
 		float shotTimer = 1;
-		float shotCount = 0;	
-		float shotLimit = 3;
+		float shotCount = 0;
+		float shotLimit = 1;
 		//default low power
 		float pow = 1000;
 		bool firePressed = false;
@@ -42,20 +42,20 @@ public class Cannon_Pitch : MonoBehaviour
 						GUI.skin.horizontalSliderThumb.fixedHeight = sliderWidth;
 						//font size based on device (so you can see it well)
 						GUI.skin.button.fontSize = (int)sliderWidth;
-						GUI.skin.label.fontSize = (int)sliderWidth-5;
+						GUI.skin.label.fontSize = (int)sliderWidth - 5;
 						GUI.skin.label.alignment = TextAnchor.UpperCenter;
 						//some label rotation for our angle indicator (4x4 backup acting as a push/pop)
 						Matrix4x4 backup = GUI.matrix;
-						GUIUtility.RotateAroundPivot(-90, new Vector2(25+sliderWidth/2, sliderHeight));
-						GUI.Label (new Rect ((sliderWidth - (sliderWidth/2)), sliderHeight-(sliderWidth/2) - 10, sliderHeight, sliderWidth*2), "Angle");
+						GUIUtility.RotateAroundPivot (-90, new Vector2 (25 + sliderWidth / 2, sliderHeight));
+						GUI.Label (new Rect ((sliderWidth - (sliderWidth / 2)), sliderHeight - (sliderWidth / 2) - 10, sliderHeight, sliderWidth * 2), "Angle");
 						GUI.matrix = backup;
 						//draw our angle slider
 						cannonAngle = GUI.VerticalSlider (new Rect (25, 25, sliderWidth, sliderHeight), cannonAngle, 45.0f, 0.0f);
 						//draw our power slider with label
-						GUI.Label (new Rect (25 + sliderWidth + 25, 20, (Screen.width/2) - (sliderWidth + 50), sliderWidth * 2), "Power");
-						pow = GUI.HorizontalSlider (new Rect (25 + sliderWidth + 25, 25, (Screen.width/2) - (sliderWidth + 50), sliderWidth * 2), pow, 1000.0f, 3000.0f);
+						GUI.Label (new Rect (25 + sliderWidth + 25, 20, (Screen.width / 2) - (sliderWidth + 50), sliderWidth * 2), "Power");
+						pow = GUI.HorizontalSlider (new Rect (25 + sliderWidth + 25, 25, (Screen.width / 2) - (sliderWidth + 50), sliderWidth * 2), pow, 1000.0f, 3000.0f);
 						//button for firing the cannonball
-						if (GUI.Button (new Rect (25 + sliderWidth + 25, 100 + sliderWidth, (Screen.width/2) - (sliderWidth + 50), sliderWidth * 2), "Fire")) {
+						if (GUI.Button (new Rect (25 + sliderWidth + 25, 100 + sliderWidth, (Screen.width / 2) - (sliderWidth + 50), sliderWidth * 2), "Fire")) {
 								firePressed = true;
 						}
 
@@ -67,6 +67,22 @@ public class Cannon_Pitch : MonoBehaviour
 		{
 				cannonBall = GameObject.FindGameObjectWithTag ("CannonBall");
 
+				
+				
+				if (cannonBall.rigidbody.mass == 0.5f) {
+						shotLimit = 4;
+				}
+				else if (cannonBall.rigidbody.mass == 5) { 
+						shotLimit = 3;
+				}
+				else if (cannonBall.rigidbody.mass == 10) {
+						shotLimit = 2;
+				}
+				else if (cannonBall.rigidbody.mass == 20) {
+						shotLimit = 1;
+				}
+
+				Debug.Log (shotLimit);
 				//Stores the script on the camera
 				gameCameraScript = gameCamera.GetComponent<CameraFollow> ();
 				//Creates a new cannon ball object
@@ -114,7 +130,7 @@ public class Cannon_Pitch : MonoBehaviour
 				}
 
 				//If the cannon balls velocity is less than 1 for more than 2 seconds jump back to the cannon
-				if (shotTimer < 1 && fired==true) {
+				if (shotTimer < 1 && fired == true) {
 						//Moves the camera to follow the cannon
 						gameCameraScript.MoveCamera (newCannonBall.transform.position);
 						//stop drawing the gui
