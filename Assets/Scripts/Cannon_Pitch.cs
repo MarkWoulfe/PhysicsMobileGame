@@ -66,19 +66,17 @@ public class Cannon_Pitch : MonoBehaviour
 		void Start ()
 		{
 				cannonBall = GameObject.FindGameObjectWithTag ("CannonBall");
-
 				
-				
-				if (cannonBall.rigidbody.mass == 0.5f) {
+				if (cannonBall.rigidbody.mass < 0.6f) {
 						shotLimit = 4;
 				}
-				else if (cannonBall.rigidbody.mass == 5) { 
+				else if (cannonBall.rigidbody.mass < 5.1f) { 
 						shotLimit = 3;
 				}
-				else if (cannonBall.rigidbody.mass == 10) {
+				else if (cannonBall.rigidbody.mass < 10.1f) {
 						shotLimit = 2;
 				}
-				else if (cannonBall.rigidbody.mass == 20) {
+				else if (cannonBall.rigidbody.mass < 20.1f) {
 						shotLimit = 1;
 				}
 
