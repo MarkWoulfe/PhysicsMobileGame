@@ -46,9 +46,6 @@ public class Cannon_Pitch : MonoBehaviour
 						//draw our slider
 						cannonAngle = GUI.VerticalSlider (new Rect (25, 25, sliderWidth, sliderHeight), cannonAngle, 45.0f, 0.0f);
 						pow = GUI.HorizontalSlider (new Rect (25 + sliderWidth + 25, 25, (Screen.width/2) - (sliderWidth + 50), sliderWidth * 2), pow, 1000.0f, 3000.0f);
-
-						//1000 - 4000 / 25 + sliderWidth + 25,25, sliderWidth * 2
-
 			
 						if (GUI.Button (new Rect (25 + sliderWidth + 25, 100 + sliderWidth, (Screen.width/2) - (sliderWidth + 50), sliderWidth * 2), "Fire")) {
 								firePressed = true;
