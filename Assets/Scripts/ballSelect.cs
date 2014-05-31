@@ -47,7 +47,7 @@ public class ballSelect : MonoBehaviour
 						Application.LoadLevel ("main");
 				}
 
-				if (GUI.Button (new Rect (100 + buttonWidth, 275 + buttonHeight, buttonWidth, buttonHeight), new GUIContent ("Leab Ball \n Mass - " + g_leadball.rigidbody.mass, leadball))) {
+				if (GUI.Button (new Rect (100 + buttonWidth, 275 + buttonHeight, buttonWidth, buttonHeight), new GUIContent ("Lead Ball \n Mass - " + g_leadball.rigidbody.mass, leadball))) {
 						DontDestroyOnLoad (g_leadball);
 						Application.LoadLevel ("main");
 				}

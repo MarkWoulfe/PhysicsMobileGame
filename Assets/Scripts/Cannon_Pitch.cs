@@ -114,7 +114,7 @@ public class Cannon_Pitch : MonoBehaviour
 				}
 
 				//If the cannon balls velocity is less than 1 for more than 2 seconds jump back to the cannon
-				if (shotTimer < 1) {
+				if (shotTimer < 1 && fired==true) {
 						//Moves the camera to follow the cannon
 						gameCameraScript.MoveCamera (newCannonBall.transform.position);
 						//stop drawing the gui
