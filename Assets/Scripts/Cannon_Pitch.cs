@@ -13,6 +13,7 @@ public class Cannon_Pitch : MonoBehaviour
 		float shotTimer = 1;
 		float shotCount = 0;
 		float shotLimit = 1;
+		float shotsLeft = 0;	
 		//default low power
 		float pow = 1000;
 		bool firePressed = false;
@@ -42,6 +43,8 @@ public class Cannon_Pitch : MonoBehaviour
 						GUI.skin.horizontalSliderThumb.fixedHeight = sliderWidth;
 						//font size based on device (so you can see it well)
 						GUI.skin.button.fontSize = (int)sliderWidth;
+						GUI.skin.box.fontSize = (int)sliderWidth - 5;
+						GUI.skin.box.alignment = TextAnchor.MiddleCenter;
 						GUI.skin.label.fontSize = (int)sliderWidth - 5;
 						GUI.skin.label.alignment = TextAnchor.UpperCenter;
 						//some label rotation for our angle indicator (4x4 backup acting as a push/pop)
@@ -54,8 +57,10 @@ public class Cannon_Pitch : MonoBehaviour
 						//draw our power slider with label
 						GUI.Label (new Rect (25 + sliderWidth + 25, 20, (Screen.width / 2) - (sliderWidth + 50), sliderWidth * 2), "Power");
 						pow = GUI.HorizontalSlider (new Rect (25 + sliderWidth + 25, 25, (Screen.width / 2) - (sliderWidth + 50), sliderWidth * 2), pow, 1000.0f, 3000.0f);
+						//label showing the user how many shots they have left			
+						GUI.Box (new Rect (25 + sliderWidth + 25, sliderWidth + 35, (Screen.width / 2) - (sliderWidth + 50), sliderWidth), "Shots Left: " + shotsLeft);
 						//button for firing the cannonball
-						if (GUI.Button (new Rect (25 + sliderWidth + 25, 100 + sliderWidth, (Screen.width / 2) - (sliderWidth + 50), sliderWidth * 2), "Fire")) {
+						if (GUI.Button (new Rect (25 + sliderWidth + 25, sliderWidth * 2 + 50, (Screen.width / 2) - (sliderWidth + 50), sliderWidth * 2), "Fire")) {
 								firePressed = true;
 						}
 
@@ -93,6 +98,7 @@ public class Cannon_Pitch : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
+				shotsLeft = shotLimit - shotCount;
 				//Gets the current angle of the cannon
 				Vector3 angle = transform.localEulerAngles;
 

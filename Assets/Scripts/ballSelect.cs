@@ -32,22 +32,22 @@ public class ballSelect : MonoBehaviour
 
 				GUI.Box (new Rect (10, 10, Screen.width - 20, Screen.height - 20), "Pick a Cannonball!");
 
-				if (GUI.Button (new Rect (50, 225, buttonWidth, buttonHeight), new GUIContent ("Football \n Mass - " + g_football.rigidbody.mass + "\n Amount: 4", football))) {
+				if (GUI.Button (new Rect (50, 225, buttonWidth, buttonHeight), new GUIContent ("Football \n Mass - " + g_football.rigidbody.mass + "\n Shots: 4", football))) {
 						DontDestroyOnLoad (g_football);
 						Application.LoadLevel ("main");
 				}
 
-				if (GUI.Button (new Rect (100 + buttonWidth, 225, buttonWidth, buttonHeight), new GUIContent ("Bowling Ball \n Mass - " + g_bowlingball.rigidbody.mass + "\n Amount: 3", bowlingball))) {
+				if (GUI.Button (new Rect (100 + buttonWidth, 225, buttonWidth, buttonHeight), new GUIContent ("Bowling Ball \n Mass - " + g_bowlingball.rigidbody.mass + "\n Shots: 3", bowlingball))) {
 						DontDestroyOnLoad (g_bowlingball);
 						Application.LoadLevel ("main");
 				}
 
-				if (GUI.Button (new Rect (50, 275 + buttonHeight, buttonWidth, buttonHeight), new GUIContent ("Cannonball \n Mass - " + g_cannonball.rigidbody.mass + "\n Amount: 2", cannonball))) {
+				if (GUI.Button (new Rect (50, 275 + buttonHeight, buttonWidth, buttonHeight), new GUIContent ("Cannonball \n Mass - " + g_cannonball.rigidbody.mass + "\n Shots: 2", cannonball))) {
 						DontDestroyOnLoad (g_cannonball);
 						Application.LoadLevel ("main");
 				}
 
-				if (GUI.Button (new Rect (100 + buttonWidth, 275 + buttonHeight, buttonWidth, buttonHeight), new GUIContent ("Lead Ball \n Mass - " + g_leadball.rigidbody.mass + "\n Amount: 1", leadball))) {
+				if (GUI.Button (new Rect (100 + buttonWidth, 275 + buttonHeight, buttonWidth, buttonHeight), new GUIContent ("Lead Ball \n Mass - " + g_leadball.rigidbody.mass + "\n Shots: 1", leadball))) {
 						DontDestroyOnLoad (g_leadball);
 						Application.LoadLevel ("main");
 				}
