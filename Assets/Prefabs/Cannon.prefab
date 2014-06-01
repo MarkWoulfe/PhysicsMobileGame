@@ -533,8 +533,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 56
-  m_CollisionDetection: 0
+  m_Constraints: 48
+  m_CollisionDetection: 1
 --- !u!54 &5400002
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -548,8 +548,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 56
-  m_CollisionDetection: 0
+  m_Constraints: 48
+  m_CollisionDetection: 1
 --- !u!54 &5400004
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -563,8 +563,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 56
-  m_CollisionDetection: 0
+  m_Constraints: 48
+  m_CollisionDetection: 1
 --- !u!54 &5400006
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -578,8 +578,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 56
-  m_CollisionDetection: 0
+  m_Constraints: 48
+  m_CollisionDetection: 1
 --- !u!95 &9500000
 Animator:
   serializedVersion: 2
@@ -605,12 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d39b19f6a30b0e4b8246f9fdb6ebe95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cannonAngle: 0
   myGUISkin: {fileID: 11400000, guid: a892250a5734d4ec2b0c65d67ad3a0db, type: 2}
-  cannonBall1: {fileID: 100018}
-  cannonBall2: {fileID: 100016}
-  cannonBall3: {fileID: 100020}
-  cannonBall4: {fileID: 100010}
   gameCamera: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -624,7 +619,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 2000
-  cannon: {fileID: 100008}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -637,7 +631,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 4000
-  cannon: {fileID: 100008}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -650,7 +643,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 2000
-  cannon: {fileID: 100008}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -663,7 +655,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 2000
-  cannon: {fileID: 100008}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
