@@ -18,6 +18,7 @@ public class Cannon_Pitch : MonoBehaviour
 		float pow = 1000;
 		bool firePressed = false;
 		bool disableGUI = false;
+		bool over = false;
 		public GameObject gameCamera;
 		private CameraFollow gameCameraScript;
 
@@ -64,6 +65,12 @@ public class Cannon_Pitch : MonoBehaviour
 								firePressed = true;
 						}
 
+				}  
+				//a reset button when the user is out of shots
+				if (over) {
+						if (GUI.Button (new Rect (Screen.width / 2 - (sliderWidth*3)/2, 50, sliderWidth * 3, sliderWidth * 2), "Retry")) {
+								Application.LoadLevel ("cannonBallSelect");
+						}
 				}
 
 		}
@@ -74,14 +81,11 @@ public class Cannon_Pitch : MonoBehaviour
 				
 				if (cannonBall.rigidbody.mass < 0.6f) {
 						shotLimit = 4;
-				}
-				else if (cannonBall.rigidbody.mass < 5.1f) { 
+				} else if (cannonBall.rigidbody.mass < 5.1f) { 
 						shotLimit = 3;
-				}
-				else if (cannonBall.rigidbody.mass < 10.1f) {
+				} else if (cannonBall.rigidbody.mass < 10.1f) {
 						shotLimit = 2;
-				}
-				else if (cannonBall.rigidbody.mass < 20.1f) {
+				} else if (cannonBall.rigidbody.mass < 20.1f) {
 						shotLimit = 1;
 				}
 
@@ -133,7 +137,9 @@ public class Cannon_Pitch : MonoBehaviour
 				}
 
 				//If the cannon balls velocity is less than 1 for more than 2 seconds jump back to the cannon
-				if (shotTimer < 1 && fired == true) {
+				if (shotTimer < 1 && fired == true && over == false) {
+						//pans out when firing the ball
+						Camera.main.fieldOfView = Mathf.Lerp (Camera.main.fieldOfView, 90, Time.deltaTime * 5);
 						//Moves the camera to follow the cannon
 						gameCameraScript.MoveCamera (newCannonBall.transform.position);
 						//stop drawing the gui
@@ -142,14 +148,22 @@ public class Cannon_Pitch : MonoBehaviour
 						//Allow another shot to be fired it is less than the limit
 						if (shotCount < shotLimit) {
 								fired = false;
+								//pans the cmaera back into the cannon
+								Camera.main.fieldOfView = Mathf.Lerp (Camera.main.fieldOfView, 60, Time.deltaTime * 5);
+								//Moves the camera to follow the new cannon ball
+								gameCameraScript.MoveCamera (cannonBall.transform.position);
+								//redraw the gui
+								disableGUI = false;
 						} else {
+								over = true;
 								DestroyObject (cannonBall);
-								Application.LoadLevel ("cannonBallSelect");
+								//resets the camera pan
+								Camera.main.fieldOfView = Mathf.Lerp (Camera.main.fieldOfView, 60, Time.deltaTime * 5);
+								//gameCameraScript.MoveCamera (new Vector3(0,2,7.5f));
+								disableGUI = true;
+								Camera.main.transform.position = new Vector3 (10, 10, -28);
+								Camera.main.transform.rotation = Quaternion.Euler (0, 0, 0);
 						}
-						//Moves the camera to follow the new cannon ball
-						gameCameraScript.MoveCamera (cannonBall.transform.position);
-						//redraw the gui
-						disableGUI = false;
 				}
 		}
 }
