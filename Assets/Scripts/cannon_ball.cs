@@ -3,8 +3,9 @@ using System.Collections;
 
 public class cannon_ball : MonoBehaviour {
 
-    //Sets the power to launch the cannon ball
-    public float power;
+	public AudioClip wood;
+	public AudioClip stone;
+	public AudioClip iron;
 
     //Fires the cannon ball
     public void fire(Vector3 p, float a, float pow)
@@ -35,4 +36,20 @@ public class cannon_ball : MonoBehaviour {
         //Makes sure that gravity is acting on the ball
         rigidbody.useGravity = true;
     }
+
+
+	void OnCollisionEnter (Collision other)
+	{
+		if (other.gameObject.tag == "Wood") {
+			AudioSource.PlayClipAtPoint(wood, other.transform.position);
+		}
+		if (other.gameObject.tag == "Stone") {
+			AudioSource.PlayClipAtPoint(stone, other.transform.position);
+		}
+		if (other.gameObject.tag == "Iron") {
+			AudioSource.PlayClipAtPoint(iron, other.transform.position);
+		}
+
+	}
+	
 }

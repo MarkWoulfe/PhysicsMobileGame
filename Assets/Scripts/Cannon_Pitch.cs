@@ -141,6 +141,9 @@ public class Cannon_Pitch : MonoBehaviour
             newCannonBall.transform.position = cannonBall.transform.position;
             //Call the fire function for the new cannon ball
             newCannonBall.GetComponent<cannon_ball>().fire(transform.position, angle.z, pow);
+			//play a firing sound with volume based on the power
+			audio.volume = pow/1500;
+			audio.Play ();
             //Reset the timer back to 0
             shotTimer = 0;
             //Increase the amount of shots taken

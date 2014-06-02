@@ -106,7 +106,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 343d6beded41b254cad91be60e873c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 2000
+  wood: {fileID: 8300000, guid: bebd503ea7fdc594483549428921b83f, type: 3}
+  stone: {fileID: 8300000, guid: 5959949698c5b5f40880112776094c02, type: 3}
+  iron: {fileID: 8300000, guid: 91268b62a02b55947b5372210196ed45, type: 3}
 --- !u!54 &464192313
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -209,7 +211,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 343d6beded41b254cad91be60e873c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 2000
+  wood: {fileID: 8300000, guid: bebd503ea7fdc594483549428921b83f, type: 3}
+  stone: {fileID: 8300000, guid: 5959949698c5b5f40880112776094c02, type: 3}
+  iron: {fileID: 8300000, guid: 91268b62a02b55947b5372210196ed45, type: 3}
 --- !u!54 &740691024
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -433,7 +437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 343d6beded41b254cad91be60e873c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 4000
+  wood: {fileID: 8300000, guid: bebd503ea7fdc594483549428921b83f, type: 3}
+  stone: {fileID: 8300000, guid: 5959949698c5b5f40880112776094c02, type: 3}
+  iron: {fileID: 8300000, guid: 91268b62a02b55947b5372210196ed45, type: 3}
 --- !u!54 &1108068354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -536,7 +542,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 343d6beded41b254cad91be60e873c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 2000
+  wood: {fileID: 8300000, guid: bebd503ea7fdc594483549428921b83f, type: 3}
+  stone: {fileID: 8300000, guid: 5959949698c5b5f40880112776094c02, type: 3}
+  iron: {fileID: 8300000, guid: 91268b62a02b55947b5372210196ed45, type: 3}
 --- !u!54 &1438666564
 Rigidbody:
   m_ObjectHideFlags: 0
