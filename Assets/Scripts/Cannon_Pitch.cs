@@ -117,11 +117,10 @@ public class Cannon_Pitch : MonoBehaviour
         //Moves it to the position of the camera
         newCannonBall.transform.position = cannonBall.transform.position;
     }
-
+	
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        shotsLeft = shotLimit - shotCount;
         //Gets the current angle of the cannon
         Vector3 angle = transform.localEulerAngles;
 
@@ -161,44 +160,49 @@ public class Cannon_Pitch : MonoBehaviour
         {
             shotTimer = 0;
         }
-
-        //If the cannon balls velocity is less than 1 for more than 2 seconds jump back to the cannon
-        if (shotTimer < 1 && fired == true && over == false)
-        {
-            //pans out when firing the ball
-            Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 90, Time.deltaTime * 5);
-            //Moves the camera to follow the cannon
-            gameCameraScript.MoveCamera(newCannonBall.transform.position);
-            //stop drawing the gui
-            disableGUI = true;
-        }
-        else
-        {
-            //Allow another shot to be fired it is less than the limit
-            if (shotCount < shotLimit)
-            {
-                fired = false;
-                //pans the camera back into the cannon
-                Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 60, Time.deltaTime * 5);
-                //Moves the camera to follow the new cannon ball
-                gameCameraScript.MoveCamera(cannonBall.transform.position);
-                //redraw the gui
-                disableGUI = false;
-            }
-            else
-            {
-                //Set the game over 
-                over = true;
-                //Destroys the cannonBall at the end of the game
-                DestroyObject(cannonBall);
-                //Resets the camera pan
-                Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 60, Time.deltaTime * 5);
-                //Turns the GUI back on
-                disableGUI = true;
-                //Moves the camera to give a view of the whole scene
-                Camera.main.transform.position = new Vector3(10, 10, -28);
-                Camera.main.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-        }
     }
+
+	void Update(){
+		//check how many shots we have left
+		shotsLeft = shotLimit - shotCount;
+
+		//If the cannon balls velocity is less than 1 for more than 2 seconds jump back to the cannon
+		if (shotTimer < 1 && fired == true && over == false)
+		{
+			//pans out when firing the ball
+			Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 90, Time.deltaTime * 5);
+			//Moves the camera to follow the cannon
+			gameCameraScript.MoveCamera(newCannonBall.transform.position);
+			//stop drawing the gui
+			disableGUI = true;
+		}
+		else
+		{
+			//Allow another shot to be fired it is less than the limit
+			if (shotCount < shotLimit)
+			{
+				fired = false;
+				//pans the camera back into the cannon
+				Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 60, Time.deltaTime * 5);
+				//Moves the camera to follow the new cannon ball
+				gameCameraScript.MoveCamera(cannonBall.transform.position);
+				//redraw the gui
+				disableGUI = false;
+			}
+			else
+			{
+				//Set the game over 
+				over = true;
+				//Destroys the cannonBall at the end of the game
+				DestroyObject(cannonBall);
+				//Resets the camera pan
+				Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 60, Time.deltaTime * 5);
+				//Turns the GUI back on
+				disableGUI = true;
+				//Moves the camera to give a view of the whole scene
+				Camera.main.transform.position = new Vector3(10, 10, -28);
+				Camera.main.transform.rotation = Quaternion.Euler(0, 0, 0);
+			}
+		}
+	}
 }

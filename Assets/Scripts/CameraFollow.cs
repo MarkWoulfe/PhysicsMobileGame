@@ -3,18 +3,6 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour {
 
-    public int t = 10;
-	
-    void start()
-    {
-
-    }
-
-	// Update is called once per frame
-	void Update () {
-        
-	}
-
     public void MoveCamera(Vector3 p)
     {
         //Gets the position of the camera
